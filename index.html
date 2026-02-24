@@ -7,25 +7,65 @@
         <script src="./main.js" defer></script>
         <title>Produtos</title>       
     </head>
-    <body class="bg-gray-200 flex flex-col items-center justify-center h-screen gap-4">
+    <body class="bg-gray-600 flex flex-col items-center justify-center h-screen gap-4">
         <h1 class="text-2xl">Lista de Produtos</h1>
-        <input 
-            type="text" 
-            on
-            class="border px-4 py-2 rounded"
-            id="produto"
-        >
-        <button 
-        class="bg-blue-500 text-white px-4 py-2 rounded"
-        onclick="adicionarProdutos()"
 
-        >
-    Adicionar
-    </button>
-        <div
-        id="lista"
-        class=" flex flex-col gap-2"
-        >
+        <div class = "grid grid-cols-2 grid-rows-3 gap-2">
+
+            <h2> Código: </h2>
+
+            <input
+                id="inputCodigo"
+                type="text" 
+                class="border px-4 py-2 rounded"
+            
+            >
+
+            <h2> Produto: </h2>
+
+            <input 
+                id="inputProduto"
+                type="text" 
+                class="border px-4 py-2 rounded"
+            
+            >
+
+            <h2> Quantidade: </h2>
+            <input
+                id="inputQuantidade"
+                type="text" 
+                class="border px-4 py-2 rounded"
+            >
+
         </div>
+
+        <button
+            class="bg-blue-500 text-white px-4 py-2 rounded"
+            onclick="apertarBotao()"
+    
+        >
+            Adicionar
+        </button>
+
+        <div class="grid grid-cols-3 gap-2">
+            <div
+            id="listaCodigos"
+            class=" flex flex-col gap-2"
+            >
+            </div>
+
+            <div
+            id="listaProdutos"
+            class=" flex flex-col gap-2"
+            >
+            </div>
+
+            <div
+            id="listaQuantidades"
+            class=" flex flex-col gap-2"
+            >
+            </div>
+        </div>
+
     </body>
 </html>
