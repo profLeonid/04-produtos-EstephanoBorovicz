@@ -1,20 +1,26 @@
 'use strict'
 
 function apertarBotao(){
-    
+        verificarInputs()
+        
+}
+
+function verificarInputs(){
+    if (document.getElementById('inputCodigo').value == "" || document.getElementById('inputProduto').value == "" || document.getElementById('inputQuantidade').value == ""){
+        return false
+    }else{
         adicionarCodigos()
         adicionarProdutos()
         adicionarQuantidades()
         limparBotao()
+        return true
+    }
+
 }
 
-
 function adicionarCodigos(){
-    const codigo = document.getElementById('inputCodigo')
 
-    if(codigo == ""){
-        return false
-    }else{
+    const codigo = document.getElementById('inputCodigo')
     const listaCodigos = document.getElementById('listaCodigos')
     const spanCodigo = document.createElement('spanCodigo')
     
@@ -23,12 +29,12 @@ function adicionarCodigos(){
     spanCodigo.className = 'bg-blue-200 px-8 py-2'
 
     return codigo
-    }
+    
 }
 
 function adicionarProdutos(){
     const produto = document.getElementById('inputProduto')
-    if (produto ==""){
+    if (document.getElementById('inputProduto').value == ""){
         return false
     }else{
     const listaProdutos = document.getElementById('listaProdutos')
@@ -44,7 +50,7 @@ function adicionarProdutos(){
 function adicionarQuantidades(){
     const quantidade = document.getElementById('inputQuantidade')
 
-    if(quantidade==""){
+    if(document.getElementById('inputQuantidade').value == ""){
         return false
         }else{
     
